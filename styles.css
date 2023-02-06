@@ -125,7 +125,7 @@ main {
       hsla(331, 100%, 13%, 0.65),
       hsla(181, 59%, 16%, 0.65)
     ),
-    url(hero.jpg);
+    url(/assets/hero.jpg);
   background-size: cover;
   background-position: center;
   opacity: 0.5;
