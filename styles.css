@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #002227;
+  background-repeat: no-repeat;
+  color: rgb(254, 254, 254);
+}
+
+/** The Header **/
+.logo {
+  display: flex;
+  flex: 1;
+  padding-top: 20px;
+  margin: 0;
+  justify-content: center;
+  /*? border: 1px solid red;/** remove this line latter **/
+}
+h2 {
+  padding: 10px;
+  margin-top: 7px;
+}
+.logo img {
+  width: 50px;
+}
+/** The NavBar **/
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 50px;
+}
+.nav-list {
+  border-radius: 50px;
+  background: #114142;
+}
+
+.nav-list ul li {
+  display: inline-block;
+  list-style-type: none;
+  margin: 10px 20px;
+}
+
+.nav-list ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-list ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: aqua;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  border-radius: 50px;
+  transition: 0.2s;
+  color: aqua;
+}
+
+.nav-list ul li a:hover::after {
+  width: 100%;
+}
+
+.search {
+  display: flex;
+  border-radius: 50px;
+  border: 0;
+  background: #d8dfe0;
+  overflow: hidden;
+}
+
+input #searchBox {
+  border: 0;
+  flex: 1;
+}
+
+.go {
+  color: white;
+  background: #430020;
+  border: 0;
+  padding: 0.8rem;
+  border-radius: 0 0 10px;
+}
+.go:hover {
+  color: aqua;
+}
+
+input {
+  text-align: center;
+  border: 0;
+}
+
+/** Hero Images **/
+
+main {
+  margin: 50px 50px;
+}
+.hero {
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding: 10px;
+  background-image: linear-gradient(
+      135deg,
+      hsla(331, 100%, 13%, 0.65),
+      hsla(181, 59%, 16%, 0.65)
+    ),
+    url(hero.jpg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5;
+  border-radius: 20px;
+}
+
+main section div h1 {
+  justify-content: start;
+  padding-left: 50px;
+  padding-top: 50px;
+  position: relative;
+}
+
+main section div h1 span {
+  color: aqua;
+}
+
+main section div p {
+  display: flex;
+  color: #fff;
+  padding-top: 10px;
+  align-items: center;
+  justify-content: start;
+  padding-left: 50px;
+  position: relative;
+}
+
+main section div a {
+  position: relative;
+}
+
+/** Cards section **/
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.cards h2 {
+  margin-top: 0;
+}
+
+.card {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  display: block;
+}
+.card p {
+  padding: 0;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #114142;
+  padding: 14px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+.btn:hover {
+  background: #114142;
+}
+
+/** Footer Section **/
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  padding: 20px 50px;
+  background: #114142;
+}
+
+.sm-logo img {
+  width: 15px;
+  margin: 0;
+}
